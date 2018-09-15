@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <body onload="first()">
+        <img src="img/snitch.gif" id ="snitch" onclick=move()>
+    
+    </body>
+    <style>
+        img {
+            opacity:0;
+            position:relative;
+            width:8%;
+            height:8%;
+            transition:all 0.2s;
+        }
+    </style>
+    <script>
+        function first(){
+            document.getElementById('snitch').style.top = 40+"vh";
+            document.getElementById('snitch').style.left = 44+"vw";
+            document.getElementById('snitch').style.opacity = 1;
+        }
+        function move(){
+            document.getElementById('snitch').style.top = (Math.random()*90)+"vh";
+            document.getElementById('snitch').style.left = (Math.random()*90)+"vw";
+        }
+    </script>
+</html>

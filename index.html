@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    	<title>Jerzy</title>
+    	<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+    	<link rel="stylesheet" type="text/css" href="main.css"/>
+    	<link rel="shortcut icon" href="img/icon.png" />
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        $("a").on('click', function(event) {
+        if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+        scrollTop: $(hash).offset().top
+        }, 800, function(){
+        window.location.hash = hash;
+        });
+        }
+        });
+        });
+        </script>
+        
+</head>
+<body>
+        <div class="pan1" id="section1">
+                <div class="header">Jerzy</div>
+                <div class="background"><img src="img/background2.png"></div>
+                <div class="tag1"><a href="#section2"><span></span><span></span><span></span></a></div>
+        </div>
+        
+        
+        
+        
+        <div class="pan2" id="section2">
+                
+                <div class="box">
+                        <h1>About</h1>
+                        <h2>I am a half-Chinese half-Mexican student now studying in the United States. 
+                        I'm currently a sophomore at BYU. Programming and Graphic Designing have become my interests since highschool. </br></br>
+                        I also love:
+                        <ul>
+                                <li>Soccer</li>
+                                <li>Table Tennis</li>
+                                <li>Swimming</li>
+                        </ul>
+                        </h2>
+                        
+                </div>
+                <div class="box2">
+                        <div id="scene" class="scene">
+			<div class="layer" data-depth="0.8"><img src="img/clouds/c5.png"></div>
+			<div class="layer" data-depth="-0.7"><img src="img/clouds/c4.png"></div>
+			<div class="layer" data-depth="0.6"><img src="img/clouds/c3.png"></div>
+			<div class="layer" data-depth="-0.5"><img src="img/clouds/c7.png"></div>
+			<div class="layer" data-depth="-0.4"><img src="img/clouds/c6.png"></div>
+			<div class="layer" data-depth="0.1"><img src="img/clouds/c2.png"></div>
+			<div class="layer" data-depth="0.1"><img src="img/clouds/c1.png"></div>
+		</div>
+                </div>
+                <div class="tag2"><a href="#section3"><span></span><span></span><span></span></a></div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="pan3" id="section3">
+                
+                <div class="box3">
+                <h1>Work Experience</h1>
+                        <ul><h2>
+                                <li>Freelance Graphic Designer</li>
+                                <li>Online Photo Editing</li>
+                                <li>Current Deisgner of CSSA</li>
+                        </h2></ul>
+                </div>
+                <div class="taggy1"><a href="https://jerzyr.portfoliobox.net/" target="_blank" class="button bouncy">Logo Portfolio</a></div>
+                <div class="taggy2"><a href="https://jerzyr.portfoliobox.net/photoshop" target="_blank" class="button bouncy" style="animation-delay:0.1s">PS Portfolio</a></div>
+               
+                <div class="tag3"><a href="#section4"><span></span><span></span><span></span></a></div>
+        </div>
+        
+        
+        
+        
+        <div class="pan4" id="section4">
+                <div class="box4">
+                        <h1>Projects</h1>
+                        <ol></br>
+                                <h2><li><a href="http://18.223.119.168/lab-1-portfolio-JerzyRamos/project1.html" target="_blank" class="ani">Catch the Snitch!</a></li></h2></br>
+                                <h2><li><a href="http://18.223.119.168/lab-1-portfolio-JerzyRamos/project2.html" target="_blank" class="ani" style="animation-delay:0.2s">Color Shifter</a></li></h2></br>
+                                <h2><li><a href="http://18.223.119.168/lab-1-portfolio-JerzyRamos/project3.html" target="_blank" class="ani" style="animation-delay:0.4s">Magical Button</a></li></h2></br>
+                        </ol>
+                </div>
+                <div class="box5">
+                        <h1>Contact</h1>
+                        
+                        <div class="icon">
+                                <a href="https://www.linkedin.com/in/jerzy-ramos-chen-b7880b16b/" target="_blank">
+                                        <img src="img/linkedin.png" id="icon1">
+                                </a>
+                                
+                        </div>
+                        
+                        <div class="icon">
+                                <a href="https://github.com/JerzyRamos/" target="_blank">
+                                <img src="img/git.png" id="icon2">
+                                </a>
+                        </div>
+                        <div class="line" id="line1">My linkedin account</div>
+                        <div class="line" id="line2">My github account</div>
+                </div>
+                <div class="tag4"><a href="#section1"><span style="transform: rotate(135deg);"></span><span style="transform: rotate(135deg);"></span><span style="transform: rotate(135deg);"></span></a></div>
+        </div>
+                
+        
+        <script src="../parallax.js"></script>
+	<script>
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+	
+	$(document).ready(function(){
+        $(document.getElementById('icon1')).mouseenter(function(){
+        showLine1();
+        });
+        $(document.getElementById('icon1')).mouseleave(function(){
+        noLine1();
+        });
+        $(document.getElementById('icon2')).mouseenter(function(){
+        showLine2();
+        });
+        $(document.getElementById('icon2')).mouseleave(function(){
+        noLine2();
+        });
+        });
+	function showLine1(){
+	        document.getElementById('line1').style.opacity=1;
+	}
+	function noLine1(){
+	        document.getElementById('line1').style.opacity=0;
+	}
+	function showLine2(){
+	        document.getElementById('line2').style.opacity=1;
+	}
+	function noLine2(){
+	        document.getElementById('line2').style.opacity=0;
+	}
+	</script>
+        
+</body>
+</html>
